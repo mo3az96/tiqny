@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $(".about-main-img").addClass("animateIn")
     //////////** header **//////////
     if ($(this).scrollTop() >= 50) {
         $("header").addClass("header-scroll");
@@ -32,11 +33,33 @@ $(document).ready(function () {
         $(".overlay").hide();
         $('.search-icon').removeClass("active");
     });
-
+    //////////** menu **//////////
     $('.menu-btn').click(function () {
         $("body").toggleClass("overflow");
         $('nav').slideToggle()
         $('.nav-list').toggleClass('act');
         $(this).toggleClass('act');
+    });
+
+    //////////** feats slider **//////////
+    var featswiper = new Swiper('.about-feats .swiper-container', {
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 23,
+            },
+            1199: {
+                slidesPerView: 4,
+                spaceBetween: 100,
+            },
+        },
+        pagination: {
+            el: '.about-feats .swiper-pagination',
+            clickable: true,
+        },
     });
 });
