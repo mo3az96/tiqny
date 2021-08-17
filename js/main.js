@@ -1,3 +1,9 @@
+$(window).on('load', function () {
+    var darkMode = localStorage.getItem('dark-mode');
+    if (darkMode == 1) {
+        $("body").addClass("dark-mode");
+    }
+});
 $(document).ready(function () {
     $(".animateImg").addClass("animateIn")
     //////////** header **//////////
@@ -20,6 +26,11 @@ $(document).ready(function () {
     //////////** mode switch **//////////
     $('.color-switch').click(function () {
         $("body").toggleClass("dark-mode");
+        if ($("body").hasClass("dark-mode")) {
+            localStorage.setItem('dark-mode', 1);
+        } else {
+            localStorage.setItem('dark-mode', 0);
+        }
     });
 
     //////////** Search **//////////
