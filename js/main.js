@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".about-main-img").addClass("animateIn")
+    $(".animateImg").addClass("animateIn")
     //////////** header **//////////
     if ($(this).scrollTop() >= 50) {
         $("header").addClass("header-scroll");
