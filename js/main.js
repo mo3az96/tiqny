@@ -73,4 +73,24 @@ $(document).ready(function () {
             clickable: true,
         },
     });
+
+    //////////** addition fieldes **//////////
+    $('.more-fields').click(function () {
+        $(".addition-fieldes").slideToggle(300);
+        $(this).toggleClass("active");
+    })
+    //////////** select2 **//////////
+    if ($(window).width() >= 991) {
+        $('.phones-saerch-select').select2();
+    }
+    $('.advanced-btn').click(function () {
+        $('.advanced-search').toggleClass('act');
+        $('.filter-overlay').toggle(300);
+        $(this).toggleClass('act');
+    });
+    $('.filter-overlay').click(function () {
+        $('.advanced-search').removeClass('act');
+        $('.filter-overlay').hide(300);
+        $('.advanced-btn').removeClass('act');
+    });
 });
