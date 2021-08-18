@@ -315,6 +315,37 @@ a:hover, a:focus {
           transform: none;
 }
 
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 991px) {
+  .page-title {
+    text-align: center;
+    font-size: 26px;
+  }
+}
+
+.page-hint {
+  font-size: 20px;
+  color: #111;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+.dark-mode .page-hint {
+  color: #bdbed1;
+}
+
+@media (max-width: 991px) {
+  .page-hint {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
 .header-search {
   position: relative;
   z-index: 16;
@@ -485,6 +516,182 @@ html[dir="ltr"] .search-btn {
 
 .dark-mode .search-input::placeholder {
   color: #bdbed1;
+}
+
+.from-group {
+  margin: 0 0 18px;
+}
+
+.from-group label {
+  margin: 0 0 8px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.from-group.required label::after {
+  content: "*";
+  color: #ff0000;
+}
+
+.input-cont {
+  position: relative;
+}
+
+.input-cont .icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #acacac;
+  font-size: 24px;
+}
+
+html[dir="rtl"] .input-cont .icon {
+  right: 18px;
+}
+
+html[dir="ltr"] .input-cont .icon {
+  left: 18px;
+}
+
+.dark-mode .input-cont .icon {
+  color: #bdbed1;
+}
+
+.form-control {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #d6d8e8;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #272e7d;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 20px;
+  resize: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html[dir="rtl"] .form-control {
+  padding-right: 50px;
+}
+
+html[dir="ltr"] .form-control {
+  padding-left: 50px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #909090;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #909090;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #909090;
+}
+
+.form-control::placeholder {
+  color: #909090;
+}
+
+.dark-mode .form-control::-webkit-input-placeholder {
+  color: #bdbed1;
+}
+
+.dark-mode .form-control:-ms-input-placeholder {
+  color: #bdbed1;
+}
+
+.dark-mode .form-control::-ms-input-placeholder {
+  color: #bdbed1;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #bdbed1;
+}
+
+.dark-mode .form-control {
+  color: #fff;
+  background-color: #272e7d;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #15bdcf;
+}
+
+.form-control:focus ~ .icon {
+  color: #15bdcf;
+}
+
+textarea.form-control {
+  height: 120px;
+}
+
+html[dir="rtl"] textarea.form-control {
+  padding: 5px 22px;
+}
+
+html[dir="ltr"] textarea.form-control {
+  padding: 5px 22px;
+}
+
+.btn-primary {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  background-color: var(--text);
+  width: 180px;
+  height: 55px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .btn-primary {
+  color: #272e7d;
+}
+
+.btn-primary:not(:disabled):not(.disabled):hover:hover, .btn-primary:not(:disabled):not(.disabled):hover:focus, .btn-primary:not(:disabled):not(.disabled):hover:active, .btn-primary:not(:disabled):not(.disabled):focus:hover, .btn-primary:not(:disabled):not(.disabled):focus:focus, .btn-primary:not(:disabled):not(.disabled):focus:active, .btn-primary:not(:disabled):not(.disabled):active:hover, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled):active:active {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #cf3c95;
+  color: #fff;
+}
+
+html[dir="rtl"] .btn-primary {
+  margin-right: auto;
+}
+
+html[dir="ltr"] .btn-primary {
+  margin-left: auto;
+}
+
+@media (max-width: 991px) {
+  .btn-primary {
+    margin: auto;
+  }
 }
 
 .nav-list {
@@ -1891,10 +2098,6 @@ html[dir="ltr"] .top-tools .social ~ .social {
   color: #1877f2;
 }
 
-.top-tools .social i.la-facebook::before {
-  content: "\f39e";
-}
-
 .color-switch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2872,6 +3075,182 @@ html[dir="ltr"] .section-hint {
           transform-origin: center;
 }
 
+.contact-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 0 0 60px;
+}
+
+@media (max-width: 991px) {
+  .contact-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 40px 0 40px;
+  }
+}
+
+.contact-methods {
+  margin-bottom: 44px;
+}
+
+@media (max-width: 991px) {
+  .contact-methods {
+    margin-bottom: 30px;
+  }
+}
+
+.contact-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-method i {
+  font-size: 30px;
+  color: #cf3c95;
+}
+
+html[dir="rtl"] .contact-method i {
+  margin-left: 20px;
+}
+
+html[dir="ltr"] .contact-method i {
+  margin-right: 20px;
+}
+
+.contact-method:hover {
+  color: #cf3c95;
+}
+
+html[dir="rtl"] .contact-method:hover {
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+}
+
+html[dir="ltr"] .contact-method:hover {
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
+}
+
+.contact-method ~ .contact-method {
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .contact-method {
+    margin: auto;
+  }
+}
+
+.contact-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991px) {
+  .contact-socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.contact-socials .social {
+  color: var(--text);
+  font-size: 22px;
+  background-color: #dfe0ec;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.dark-mode .contact-socials .social {
+  background-color: #3d438a;
+}
+
+.contact-socials .social:hover {
+  color: #fff;
+}
+
+.contact-socials .social:hover.rss {
+  background-color: #f26522;
+}
+
+.contact-socials .social:hover.newspaper {
+  background-color: #cf3c95;
+}
+
+.contact-socials .social:hover.telegram {
+  background-color: #0088cc;
+}
+
+.contact-socials .social:hover.instagram {
+  background-color: #e1306c;
+}
+
+.contact-socials .social:hover.youtube {
+  background-color: #ff0000;
+}
+
+.contact-socials .social:hover.twitter {
+  background-color: #1c9ceb;
+}
+
+.contact-socials .social:hover.facebook {
+  background-color: #1877f2;
+}
+
+html[dir="rtl"] .contact-socials .social ~ .social {
+  margin-right: 10px;
+}
+
+html[dir="ltr"] .contact-socials .social ~ .social {
+  margin-left: 10px;
+}
+
+.contact-form {
+  padding: 35px 30px 39px;
+  border-radius: 20px;
+  background-color: #e9e9f1;
+}
+
+.dark-mode .contact-form {
+  background-color: #1f2671;
+}
+
+@media (max-width: 991px) {
+  .contact-form {
+    padding: 20px 15px;
+  }
+}
+
 footer {
   position: relative;
   padding: 90px 0 60px;
@@ -2990,10 +3369,6 @@ footer .pattern {
 
 .footer .social:hover.facebook {
   background-color: #1877f2;
-}
-
-.footer .social i.la-facebook::before {
-  content: "\f39e";
 }
 
 .footer-logo {
