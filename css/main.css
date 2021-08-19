@@ -4219,6 +4219,75 @@ html[dir="ltr"] .tools-line .more-fields {
   background-color: #1f2671;
 }
 
+.search-page {
+  padding: 0 0 100px;
+}
+
+@media (max-width: 767px) {
+  .search-page {
+    padding: 20px 0 40px;
+  }
+}
+
+.search-page-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .search-page-head {
+    margin-bottom: 25px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .search-page-head .article-conut {
+    margin: 0;
+  }
+}
+
+.search-page-title {
+  font-size: 24px;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+}
+
+html[dir="rtl"] .search-page-title {
+  margin-left: 13px;
+}
+
+html[dir="ltr"] .search-page-title {
+  margin-right: 13px;
+}
+
+@media (max-width: 767px) {
+  .search-page-title {
+    margin: 0 0 8px;
+  }
+  html[dir="rtl"] .search-page-title {
+    margin-left: 0;
+  }
+  html[dir="ltr"] .search-page-title {
+    margin-right: 0;
+  }
+}
+
+.search-page-title span {
+  color: #cf3c95;
+}
+
+@media (max-width: 767px) {
+  .search-page-title span {
+    display: block;
+  }
+}
+
 footer {
   position: relative;
   padding: 90px 0 60px;
