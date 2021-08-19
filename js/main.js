@@ -93,4 +93,28 @@ $(document).ready(function () {
         $('.filter-overlay').hide(300);
         $('.advanced-btn').removeClass('act');
     });
+    //////////** comments scroll **//////////
+    
+    $('a[data-scroll]').click(function (e) {
+        e.preventDefault();
+        //Set Offset Distance from top to account for fixed nav
+        var target = ('#' + $(this).data('scroll'));
+        var $target = $(target);
+        //Animate the scroll to, include easing lib if you want more fancypants easings
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 100
+        }, 1000, 'swing');
+    });
+    
+    //////////** accordion **//////////
+    $('.acc-head').click(function () {
+        $(".acc-head").not(this).removeClass("active");
+        $(this).toggleClass("active");
+        if ($(this).siblings().css('display') == 'none') {
+            $(this).siblings().slideDown(500);
+        } else {
+            $(this).siblings().slideUp(500);
+        }
+        $(".acc-head").not(this).siblings().slideUp(500);
+    })
 });
