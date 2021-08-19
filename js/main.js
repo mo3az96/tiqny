@@ -80,7 +80,7 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     })
     //////////** select2 **//////////
-    if ($(window).width() >= 991) {
+    if ($(window).width() >= 1199) {
         $('.phones-saerch-select').select2();
     }
     $('.advanced-btn').click(function () {
