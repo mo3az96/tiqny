@@ -1213,8 +1213,20 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
   margin-bottom: 24px;
 }
 
+@media (max-width: 991px) {
+  .compare-banner {
+    display: none;
+  }
+}
+
 .compare-banners {
   margin-bottom: 38px;
+}
+
+@media (max-width: 991px) {
+  .compare-banners {
+    display: none;
+  }
 }
 
 .top-news-grid {
@@ -2687,6 +2699,22 @@ table.features-table a[fadata-fancybox]::after {
   background-color: #000;
   opacity: 0.5;
   content: "";
+}
+
+@media (max-width: 767px) {
+  .compare-accordions {
+    padding: 0 15px;
+  }
+  .compare-accordions .acc-body {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .compare-accordions table.features-table {
+    width: auto;
+  }
+  .compare-accordions table.features-table td {
+    min-width: 152px;
+  }
 }
 
 .top-header-conteiner {
@@ -5262,10 +5290,23 @@ html[dir="ltr"] .brand-button ~ .brand-button {
   }
 }
 
+@media (max-width: 767px) {
+  .compare-page .container {
+    padding: 0;
+  }
+}
+
 .compare-title {
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 25px;
+}
+
+@media (max-width: 767px) {
+  .compare-title {
+    text-align: center;
+    margin: 0 0 20px;
+  }
 }
 
 .compare-search-grid {
@@ -5275,6 +5316,23 @@ html[dir="ltr"] .brand-button ~ .brand-button {
       grid-template-columns: 1fr 1fr 1fr;
   gap: 29px;
   margin-bottom: 22px;
+}
+
+@media (max-width: 767px) {
+  .compare-search-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    gap: unset;
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    overflow-x: auto;
+    padding: 0 15px;
+  }
 }
 
 .compare-search-item {
@@ -5290,8 +5348,29 @@ html[dir="ltr"] .brand-button ~ .brand-button {
   margin: 0 0 7px;
 }
 
+@media (max-width: 767px) {
+  .compare-search-item label {
+    font-size: 16px;
+    margin: 0 0 5px;
+    padding: 0 7px;
+  }
+}
+
 .dark-mode .compare-search-item {
   background-color: #1f2671;
+}
+
+@media (max-width: 767px) {
+  .compare-search-item {
+    padding: 10px 10px 14px;
+    min-width: 152px;
+  }
+  html[dir="rtl"] .compare-search-item ~ .compare-search-item {
+    margin-right: 10px;
+  }
+  html[dir="ltr"] .compare-search-item ~ .compare-search-item {
+    margin-left: 10px;
+  }
 }
 
 .compare-search-cont {
@@ -5363,6 +5442,13 @@ html[dir="ltr"] .brand-button ~ .brand-button {
   border-color: #15bdcf;
 }
 
+@media (max-width: 767px) {
+  .compare-search-input {
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
 .compare-search-btn {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -5403,6 +5489,20 @@ html[dir="ltr"] .compare-search-btn {
   margin-left: 7px;
 }
 
+@media (max-width: 767px) {
+  .compare-search-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+  html[dir="rtl"] .compare-search-btn {
+    margin-right: 3px;
+  }
+  html[dir="ltr"] .compare-search-btn {
+    margin-left: 3px;
+  }
+}
+
 .compare-phones-grid {
   display: -ms-grid;
   display: grid;
@@ -5410,6 +5510,23 @@ html[dir="ltr"] .compare-search-btn {
       grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .compare-phones-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    gap: unset;
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    overflow-x: auto;
+    padding: 0 15px;
+  }
 }
 
 .compare-phone-item .img-cont {
@@ -5421,6 +5538,12 @@ html[dir="ltr"] .compare-search-btn {
   position: relative;
   background-color: #fff;
   margin-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  .compare-phone-item .img-cont {
+    border-width: 1px;
+  }
 }
 
 .compare-phone-item .compare-phone-img {
@@ -5463,6 +5586,15 @@ html[dir="ltr"] .compare-search-btn {
   padding: 0 5px;
 }
 
+@media (max-width: 767px) {
+  .compare-phone-item .compare-phone-name {
+    padding: 0;
+    line-height: 1.1;
+    height: 53px;
+    display: inline-block;
+  }
+}
+
 .compare-phone-item .compare-phone-name:hover {
   color: #cf3c95;
 }
@@ -5479,6 +5611,12 @@ html[dir="ltr"] .compare-search-btn {
   color: #bdbed1;
 }
 
+@media (max-width: 767px) {
+  .compare-phone-item .storage-hint {
+    padding: 0;
+  }
+}
+
 .compare-phone-item .price-cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5490,6 +5628,19 @@ html[dir="ltr"] .compare-search-btn {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .compare-phone-item .price-cont {
+    padding: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .compare-phone-item .price {
@@ -5516,6 +5667,18 @@ html[dir="ltr"] .compare-search-btn {
   text-decoration: none;
 }
 
+@media (max-width: 767px) {
+  .compare-phone-item {
+    min-width: 152px;
+  }
+  html[dir="rtl"] .compare-phone-item ~ .compare-phone-item {
+    margin-right: 10px;
+  }
+  html[dir="ltr"] .compare-phone-item ~ .compare-phone-item {
+    margin-left: 10px;
+  }
+}
+
 .table-price {
   font-size: 16px;
   color: #111111;
@@ -5533,6 +5696,18 @@ html[dir="ltr"] .compare-search-btn {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 7px;
+}
+
+@media (max-width: 767px) {
+  .table-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .table-btns a.buy-btn {
@@ -5570,12 +5745,30 @@ html[dir="ltr"] .compare-search-btn {
   display: none;
 }
 
+@media (max-width: 767px) {
+  .table-btns a.buy-btn {
+    width: 100%;
+  }
+}
+
 html[dir="rtl"] .table-btns a.buy-btn ~ .buy-btn {
   margin-right: 5px;
 }
 
 html[dir="ltr"] .table-btns a.buy-btn ~ .buy-btn {
   margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .table-btns a.buy-btn ~ .buy-btn {
+    margin-top: 5px;
+  }
+  html[dir="rtl"] .table-btns a.buy-btn ~ .buy-btn {
+    margin-right: 0;
+  }
+  html[dir="ltr"] .table-btns a.buy-btn ~ .buy-btn {
+    margin-left: 0;
+  }
 }
 
 footer {
