@@ -35,20 +35,15 @@ $(document).ready(function () {
 
     //////////** Search **//////////
     $('.search-icon').click(function () {
-        $(".search-form").slideToggle(300);
-        $(".overlay").toggle();
+        $(".search-form-cont").slideToggle(300);
         $(this).toggleClass("active");
-    });
-    $('.overlay').click(function () {
-        $(".search-form").slideUp(300);
-        $(".overlay").hide();
-        $('.search-icon').removeClass("active");
     });
     //////////** menu **//////////
     $('.menu-btn').click(function () {
         $("body").toggleClass("overflow");
         $('nav').slideToggle()
         $('.nav-list').toggleClass('act');
+        $('.logo').toggleClass('active');
         $(this).toggleClass('act');
     });
 
