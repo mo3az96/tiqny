@@ -2674,12 +2674,12 @@ html[dir="ltr"] .dark-mode table.features-table td {
   border-color: #1f2671;
 }
 
-table.features-table a[fadata-fancybox] {
+table.features-table a[data-fancybox] {
   position: relative;
   display: block;
 }
 
-table.features-table a[fadata-fancybox] .play-icon {
+table.features-table a[data-fancybox] .play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2690,7 +2690,13 @@ table.features-table a[fadata-fancybox] .play-icon {
   z-index: 2;
 }
 
-table.features-table a[fadata-fancybox]::after {
+@media (max-width: 767px) {
+  table.features-table a[data-fancybox] .play-icon {
+    font-size: 24px;
+  }
+}
+
+table.features-table a[data-fancybox]::after {
   position: absolute;
   top: 0;
   left: 0;
