@@ -89,7 +89,7 @@ $(document).ready(function () {
         $('.advanced-btn').removeClass('act');
     });
     //////////** comments scroll **//////////
-    
+
     $('a[data-scroll]').click(function (e) {
         e.preventDefault();
         //Set Offset Distance from top to account for fixed nav
@@ -100,7 +100,7 @@ $(document).ready(function () {
             'scrollTop': $target.offset().top - 100
         }, 1000, 'swing');
     });
-    
+
     //////////** accordion **//////////
     $('.acc-head').click(function () {
         $(".acc-head").not(this).removeClass("active");
@@ -112,4 +112,36 @@ $(document).ready(function () {
         }
         $(".acc-head").not(this).siblings().slideUp(500);
     })
+
+    ///////// ** gallery thumbs ** /////////
+    var phoneThumbs = new Swiper(".main-thumbs-slider", {
+        slidesPerView: 3.25,
+        // loop: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            0: {
+                spaceBetween: 10,
+            },
+            767: {
+                spaceBetween: 9,
+            },
+            1199: {
+                direction: "vertical",
+            },
+        },
+    });
+    var phoneImgs = new Swiper(".main-imgs-slider", {
+        spaceBetween: 1,
+        // loop: true,
+        thumbs: {
+            swiper: phoneThumbs,
+        },
+    });
+
+    $(".range-slider-input").on("input", function (e) {
+        var width = $(this).val()
+        $(this).siblings(".value-bg").width(width * 10 + "%");
+        $(this).parents(".range-slider-item").find(".value").html(width);
+    });
 });
