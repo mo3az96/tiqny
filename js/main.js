@@ -47,28 +47,6 @@ $(document).ready(function () {
         $(this).toggleClass('act');
     });
 
-    //////////** feats slider **//////////
-    var featswiper = new Swiper('.about-feats .swiper-container', {
-        breakpoints: {
-            0: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            767: {
-                slidesPerView: 3,
-                spaceBetween: 23,
-            },
-            1199: {
-                slidesPerView: 4,
-                spaceBetween: 100,
-            },
-        },
-        pagination: {
-            el: '.about-feats .swiper-pagination',
-            clickable: true,
-        },
-    });
-
     //////////** addition fieldes **//////////
     $('.more-fields').click(function () {
         $(".addition-fieldes").slideToggle(300);
@@ -92,10 +70,8 @@ $(document).ready(function () {
 
     $('a[data-scroll]').click(function (e) {
         e.preventDefault();
-        //Set Offset Distance from top to account for fixed nav
         var target = ('#' + $(this).data('scroll'));
         var $target = $(target);
-        //Animate the scroll to, include easing lib if you want more fancypants easings
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - 100
         }, 1000, 'swing');
@@ -112,23 +88,33 @@ $(document).ready(function () {
         }
         $(".acc-head").not(this).siblings().slideUp(500);
     })
+    $('.allPrice').click(function (e) {
+        $("#allprices").siblings().slideDown(500);
+    })
 
     ///////// ** gallery thumbs ** /////////
     var phoneThumbs = new Swiper(".main-thumbs-slider", {
-        slidesPerView: 3.25,
         // loop: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {
             0: {
                 spaceBetween: 10,
+                slidesPerView: 3.25,
             },
             767: {
                 spaceBetween: 9,
+                slidesPerView: 3.25,
             },
             1199: {
+                slidesPerView: 3,
+                spaceBetween: 9,
                 direction: "vertical",
             },
+        },
+        navigation: {
+            nextEl: '.main-thumbs-cont .swiper-btn-next',
+            prevEl: '.main-thumbs-cont .swiper-btn-prev',
         },
     });
     var phoneImgs = new Swiper(".main-imgs-slider", {
