@@ -80,11 +80,10 @@ $(document).ready(function () {
     //////////** accordion **//////////
     $('.acc-head').click(function () {
         $(".acc-head").not(this).removeClass("active");
-        $(this).toggleClass("active");
         if ($(this).siblings().css('display') == 'none') {
-            $(this).siblings().slideDown(500);
+            $(this).addClass("active").siblings().slideDown(500);
         } else {
-            $(this).siblings().slideUp(500);
+            $(this).removeClass("active").siblings().slideUp(500);
         }
         $(".acc-head").not(this).siblings().slideUp(500);
     })
