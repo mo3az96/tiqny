@@ -707,6 +707,7 @@ html[dir="ltr"] .input-cont .icon {
 .dark-mode .form-control {
   color: #fff;
   background-color: #272e7d;
+  border-color: #495094;
 }
 
 .form-control:focus {
@@ -3000,6 +3001,14 @@ html[dir="ltr"] .range-slider-item strong {
   border-bottom: 2px solid #ededf2;
 }
 
+.dark-mode .acc {
+  border-color: #495094;
+}
+
+.dark-mode .acc:last-of-type {
+  border-color: #495094;
+}
+
 .acc-head {
   font-size: 18px;
   color: #fff;
@@ -4578,6 +4587,7 @@ html[dir="ltr"] .contact-control {
 .dark-mode .contact-control {
   color: #fff;
   background-color: #272e7d;
+  border-color: #495094;
 }
 
 .contact-control:focus {
@@ -5356,22 +5366,8 @@ html[dir="ltr"] .search-page-title {
   }
 }
 
-.post-body a[data-fancybox] {
-  display: block;
+.post-body img {
   border-radius: 10px;
-  overflow: hidden;
-  cursor: default;
-}
-
-.post-body a[data-fancybox] img {
-  border-radius: 10px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.post-body a[data-fancybox]:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .post-body .double-banner {
@@ -5504,6 +5500,14 @@ html[dir="ltr"] .post-owner .name {
   }
 }
 
+.dark-mode .post-owner {
+  color: #15bdcf;
+}
+
+.dark-mode .post-owner:hover {
+  color: #cf3c95;
+}
+
 .post-info-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5609,6 +5613,11 @@ html[dir="ltr"] .post-info-item {
   transition: all 0.3s ease-in-out;
 }
 
+.dark-mode .tag {
+  background-color: #3b4296;
+  color: #b9bbd6;
+}
+
 .tag:hover {
   color: #fff;
   background-color: #272e7d;
@@ -5655,6 +5664,7 @@ html[dir="ltr"] .tag {
 
 .dark-mode .post-navs {
   border-color: transparent;
+  border-top-color: #495094;
 }
 
 .nav-post {
@@ -6621,6 +6631,10 @@ html[dir="ltr"] .table-btns a.buy-btn ~ .buy-btn {
   }
 }
 
+.dark-mode .smartphone-infos-grid {
+  background-color: #495094;
+}
+
 .smartphone-infos-item {
   background-color: #fff;
   display: -webkit-box;
@@ -6783,6 +6797,10 @@ html[dir="ltr"] .table-btns a.buy-btn ~ .buy-btn {
   border: 2px solid #d6d8e8;
 }
 
+.dark-mode .prices-table {
+  border-color: #495094;
+}
+
 .prices-table .price-item {
   display: -ms-grid;
   display: grid;
@@ -6820,6 +6838,11 @@ html[dir="ltr"] .table-btns a.buy-btn ~ .buy-btn {
     justify-content: center;
     padding: 22px 0 17px;
   }
+}
+
+.dark-mode .prices-table .price-item {
+  background-color: #495094;
+  border-color: #495094;
 }
 
 .prices-table .location {
@@ -6973,6 +6996,12 @@ html[dir="ltr"] .prices-table .buy-btn ~ .buy-btn {
   }
 }
 
+.phone-review img {
+  border-radius: 10px;
+  margin: 35px auto;
+  display: block;
+}
+
 .review-img {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -7002,7 +7031,7 @@ html[dir="ltr"] .prices-table .buy-btn ~ .buy-btn {
 }
 
 .review-img img {
-  border-radius: 10px;
+  margin: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -7055,8 +7084,20 @@ footer .pattern {
   }
 }
 
+footer .pattern.dark-pattern {
+  display: none;
+}
+
 .dark-mode footer {
   background-color: #1f2671;
+}
+
+.dark-mode footer .pattern {
+  display: none;
+}
+
+.dark-mode footer .pattern.dark-pattern {
+  display: block;
 }
 
 .footer {
@@ -7096,7 +7137,8 @@ footer .pattern {
     margin-bottom: 42px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 30px;
+    padding: 0;
+    max-width: 385px;
   }
 }
 
@@ -7305,7 +7347,6 @@ footer .pattern {
 
 .header .socials {
   display: none;
-  padding: 0 35px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7318,6 +7359,8 @@ footer .pattern {
   bottom: 75px;
   left: 0;
   right: 0;
+  max-width: 285px;
+  margin: auto;
 }
 
 @media (max-width: 991px) {
