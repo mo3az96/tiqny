@@ -1,0 +1,18 @@
+.loading-img {
+    background-color: #fafafa !important;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        opacity: 0 !important;
+        filter: blur(40px);
+    }
+}
+
+.loaded-img {
+
+    img {
+        opacity: 1;
+        filter: blur(0);
+    }
+}

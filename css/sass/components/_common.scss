@@ -1,0 +1,217 @@
+.social {
+    transition: all 0.3s ease-in-out;
+
+    i {
+        &.la-facebook {
+            &::before {
+                content: "\f39e";
+            }
+        }
+    }
+}
+
+.item-cat {
+    &.os {
+        background-color: #ea3b5a;
+        color: #ea3b5a;
+    }
+
+    &.electronics {
+        background-color: #10b8b0;
+        color: #10b8b0;
+    }
+
+    &.networks {
+        background-color: #ffa200;
+        color: #ffa200;
+    }
+
+    &.phones {
+        background-color: #1fb041;
+        color: #1fb041;
+    }
+
+    &.games {
+        background-color: #f96e31;
+        color: #f96e31;
+    }
+
+    &.accessories {
+        background-color: #a55ee9;
+        color: #a55ee9;
+    }
+
+    &.security {
+        background-color: #4b7beb;
+        color: #4b7beb;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 15;
+}
+
+.light-logo {
+    display: none;
+}
+
+.dark-logo {
+    display: block;
+}
+
+.dark-mode {
+    .light-logo {
+        display: block;
+    }
+
+    .dark-logo {
+        display: none;
+    }
+}
+
+.header-banner-container {
+    padding: 16px 0;
+
+    @include sm {
+        padding: 20px 0;
+    }
+
+    @include xs {
+        padding: 15px 0;
+    }
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+    @include sm {
+        display: flex;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 3px;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $main;
+        }
+    }
+}
+
+.animateImg {
+    &.animateIn {
+
+        img {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.page-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 20px;
+
+    @include sm {
+        text-align: center;
+        font-size: 26px;
+    }
+}
+
+.page-hint {
+    font-size: 20px;
+    color: #111;
+    font-weight: 300;
+    margin: 0 0 40px;
+
+    .dark-mode & {
+        color: #bdbed1;
+    }
+
+    @include sm {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.grey-main {
+
+    .header-banner-container,
+    .breadcrumb-container {
+        background-color: #e9eaf2;
+
+    }
+
+    &.dark-mode {
+
+        .header-banner-container,
+        .breadcrumb-container {
+            background-color: $dark;
+        }
+    }
+
+    .page-info-container {
+        background-color: #e9eaf2;
+
+        .dark-mode & {
+            background-color: $dark;
+        }
+    }
+}
+
+.page-info-container {
+    padding: 15px 0 50px;
+
+    @include xs {
+        padding: 20px 0 40px;
+    }
+
+    &.brand-page & {
+        padding: 15px 0 80px;
+
+        @include xs {
+            padding: 20px 0 40px;
+        }
+    }
+}
+
+.page-sec-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 35px;
+    text-align: center;
+
+    @include sm {
+        font-size: 26px;
+    }
+}
+
+.page-main-title {
+    font-size: 24px;
+    color: $text;
+    font-weight: 700;
+    margin: 0 0 40px;
+
+    @include xs {
+        text-align: center;
+        margin: 0 0 25px;
+    }
+}

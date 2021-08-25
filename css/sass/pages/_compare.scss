@@ -1,0 +1,388 @@
+.compare-page {
+    padding: 20px 0 100px;
+
+    @include sm {
+        padding: 20px 0 40px;
+    }
+
+    @include xs {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+.compare-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 25px;
+
+    @include xs {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+}
+
+.compare-search-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 29px;
+    margin-bottom: 22px;
+
+    @include xs {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        gap: unset;
+        grid-template-columns: unset;
+        overflow-x: auto;
+        padding: 0 15px;
+    }
+}
+
+.compare-search-item {
+    border-radius: 10px;
+    background-color: #e9eaf2;
+    padding: 20px 20px 25px;
+
+    label {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 10px;
+        margin: 0 0 7px;
+
+        @include xs {
+            font-size: 16px;
+            margin: 0 0 5px;
+            padding: 0 7px;
+        }
+    }
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+
+    @include xs {
+        padding: 10px 10px 14px;
+        min-width: 152px;
+
+        ~.compare-search-item {
+            @include rtl {
+                margin-right: 10px;
+            }
+
+            @include ltr {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.compare-search-cont {
+    display: flex;
+    align-items: center;
+}
+
+.compare-search-input {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: none;
+    color: $sec;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 20px;
+    resize: none;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: #9c9c9c;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+    }
+
+    .dark-mode & {
+        color: #fff;
+        background-color: $sec;
+    }
+
+    &:focus {
+        box-shadow: none;
+        border-color: $third;
+    }
+
+    @include xs {
+        height: 36px;
+        font-size: 13px;
+    }
+}
+
+.compare-search-btn {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: $third;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: none;
+        box-shadow: none;
+        background-color: $main;
+    }
+
+    @include rtl {
+        margin-right: 7px;
+    }
+
+    @include ltr {
+        margin-left: 7px;
+    }
+
+    @include xs {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+
+        @include rtl {
+            margin-right: 3px;
+        }
+
+        @include ltr {
+            margin-left: 3px;
+        }
+    }
+}
+
+.compare-phones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    @include xs {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        gap: unset;
+        grid-template-columns: unset;
+        overflow-x: auto;
+        padding: 0 15px;
+    }
+}
+
+.compare-phone-item {
+    .img-cont {
+        width: 100%;
+        border: 2px solid #d6d8e8;
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 100%;
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 12px;
+
+        @include xs {
+            border-width: 1px;
+        }
+    }
+
+    .compare-phone-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .compare-phone-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: $text;
+        transition: all 0.3s ease-in-out;
+        padding: 0 5px;
+
+        @include xs {
+            padding: 0;
+            line-height: 1.1;
+            height: 44px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    .storage-hint {
+        font-size: 18px;
+        color: #111;
+        display: block;
+        margin-bottom: 6px;
+        padding: 0 5px;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+
+        @include xs {
+            padding: 0;
+            font-size: 14px;
+        }
+    }
+
+    .price-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+
+        @include xs {
+            padding: 0;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: $main;
+    }
+
+    .allPrice {
+        font-size: 16px;
+        color: #969596;
+        font-weight: 500;
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+
+        &:hover {
+            color: $third;
+            text-decoration: none;
+        }
+        @include xs{
+            font-size: 14px;
+        }
+    }
+
+    @include xs {
+        min-width: 152px;
+
+        ~.compare-phone-item {
+            @include rtl {
+                margin-right: 10px;
+            }
+
+            @include ltr {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.table-price {
+    font-size: 16px;
+    color: #111111;
+
+    .dark-mode & {
+        color: #bdbed1;
+    }
+}
+
+.table-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+
+    @include xs {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    a.buy-btn {
+        background-color: $sec;
+        color: #fff;
+        padding: 0 9px;
+        height: 32px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+
+        .dark-mode & {
+            color: $sec;
+            background-color: #fff;
+        }
+
+        &:hover {
+            background-color: $main;
+            color: #fff;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+
+        ~.buy-btn {
+            @include rtl {
+                margin-right: 5px;
+            }
+
+            @include ltr {
+                margin-left: 5px;
+            }
+
+            @include xs {
+                margin-top: 5px;
+
+                @include rtl {
+                    margin-right: 0;
+                }
+
+                @include ltr {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

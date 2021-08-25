@@ -1,0 +1,42 @@
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px;
+    margin: 0;
+
+    @include xs {
+        display: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+
+        ~li {
+            &::before {
+                content: "/";
+                color: #808080;
+                margin: 0 7px;
+                font-size: 14px;
+
+                .dark-mode & {
+                    color: #bdbed1;
+                }
+            }
+        }
+    }
+
+    a {
+        color: #808080;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+
+        &:hover {
+            color: $main;
+        }
+    }
+}

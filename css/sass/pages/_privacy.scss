@@ -1,0 +1,74 @@
+.privacy-page {
+    @include xs {
+        padding: 20px 0 0;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+
+        @include sm {
+            text-align: center;
+            font-size: 26px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 2;
+        margin: 0 0 60px;
+
+        @include sm {
+            margin: 0 0 30px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 15px;
+
+        @include sm {
+            font-size: 22px;
+        }
+    }
+
+    .first-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+
+        p {
+            margin: 0;
+
+            @include sm {
+                order: 2;
+                margin: 0 0 30px;
+            }
+        }
+
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            gap: unset;
+            grid-template-columns: unset;
+        }
+    }
+}
+
+.privacy-img {
+    text-align: left;
+
+    @include sm {
+        text-align: center;
+    }
+
+    img {
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center;
+    }
+}

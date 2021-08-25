@@ -1,0 +1,7 @@
+.list-page {
+    padding: 0 0 100px;
+
+    @include xs {
+        padding: 20px 0 40px;
+    }
+}

@@ -1,0 +1,355 @@
+.advanced-search {
+    background-color: $sec;
+    padding: 43px 0 53px;
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+
+    @include md {
+        display: flex;
+        position: fixed;
+        top: 100px;
+        background-color: transparent;
+        padding: 0;
+        z-index: 12;
+        transition: all 0.3s ease-in-out;
+
+        .dark-mode & {
+            background-color: transparent;
+        }
+
+        @include rtl {
+            right: -300px;
+        }
+
+        @include ltr {
+            left: -300px;
+        }
+
+        &.act {
+            z-index: 16;
+
+            @include rtl {
+                right: -0;
+            }
+
+            @include ltr {
+                left: -0;
+            }
+        }
+    }
+}
+
+.advanced-cont {
+    @include md {
+        background-color: $sec;
+        padding: 20px 15px;
+        width: 300px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        z-index: 3;
+
+        .container {
+            padding: 0;
+        }
+
+        .dark-mode & {
+            background-color: $dark;
+        }
+    }
+}
+
+.filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 2;
+    display: none;
+}
+
+.advanced-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    background-color: $third;
+    font-size: 32px;
+    color: #fff !important;
+    margin-top: 70px;
+    display: none;
+    position: relative;
+    z-index: 3;
+
+    @include md {
+        display: flex;
+    }
+
+    &.act {
+        background-color: $main;
+        color: #fff;
+    }
+}
+
+.search-head {
+    color: #fff;
+    font-size: 24px;
+    font-family: 500;
+    margin: 0 0 18px;
+
+    @include md {
+        text-align: center;
+    }
+}
+
+.phones-saerch-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .from-group {
+        label {
+            color: #fff;
+        }
+    }
+
+    @include md {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.phones-saerch-input {
+    width: 945px;
+
+    @include rtl {
+        padding: 0 20px;
+    }
+
+    @include ltr {
+        padding: 0 20px;
+    }
+
+    &:focus {
+        border-color: $main;
+    }
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.phones-saerch-submit {
+    @include md {
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+}
+
+.addition-fieldes {
+    width: 100%;
+    padding-top: 40px;
+    display: none;
+
+    @include md {
+        padding-top: 30px;
+    }
+}
+
+.from-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include md {
+        gap: 15px;
+        grid-template-columns: 1fr;
+
+        .from-group {
+            margin: 0;
+        }
+    }
+}
+
+.tools-line {
+    display: flex;
+    align-items: center;
+    margin: 18px 0 0;
+
+    @include sm {
+        justify-content: center;
+    }
+
+    .reset {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: #bdbed1;
+        transition: all 0.3s ease-in-out;
+
+        i {
+            font-size: 16px;
+            color: #bdbed1;
+            transition: color 0.3s ease-in-out;
+            transition: transform 0.7s ease-in-out;
+
+            @include rtl {
+                margin-left: 7px;
+            }
+
+            @include ltr {
+                margin-right: 7px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $third;
+
+            i {
+                color: $third;
+                transform: rotate(-360deg);
+            }
+        }
+    }
+
+    .more-fields {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #bdbed1;
+        transition: all 0.3s ease-in-out;
+
+        i {
+            font-size: 16px;
+            color: #bdbed1;
+            transition: all 0.3s ease-in-out;
+
+            @include rtl {
+                margin-left: 7px;
+            }
+
+            @include ltr {
+                margin-right: 7px;
+            }
+        }
+
+        .close-fields {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $third;
+
+            i {
+                color: $third;
+            }
+        }
+
+        &.active {
+            color: $main;
+
+            .close-fields {
+                display: block;
+            }
+
+            .open-fields {
+                display: none;
+            }
+
+            i {
+                color: $main;
+
+                &::before {
+                    content: "\f068";
+                }
+            }
+        }
+
+        @include rtl {
+            margin-left: 30px;
+        }
+
+        @include ltr {
+            margin-right: 30px;
+        }
+    }
+}
+
+.brands-container {
+    padding: 70px 0 35px;
+
+    @include md {
+        padding: 20px 0 30px;
+    }
+}
+
+
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px 29px;
+
+    @include md {
+        gap: 20px 15px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 10px;
+    }
+}
+
+.brand-item {
+    padding-bottom: 100%;
+    width: 100%;
+    position: relative;
+
+    .brand {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: 2px solid #d6d8e8;
+        border-radius: 10px;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border-color: $third;
+        }
+    }
+}
+
+.smartphones-banner-container {
+    padding: 0 0 30px;
+}
+
+.smartphones-container {
+    background-color: #e9eaf2;
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+}

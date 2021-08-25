@@ -1,0 +1,15 @@
+:root {
+    --text: #272e7d;
+}
+
+.dark-mode {
+    --text: #fff;
+}
+
+$main:#cf3c95;
+$sec:#272e7d;
+$third:#15bdcf;
+
+$text:var(--text);
+
+$dark:#1f2671;

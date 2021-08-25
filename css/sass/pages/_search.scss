@@ -1,0 +1,56 @@
+.search-page {
+    padding: 0 0 100px;
+
+    @include xs {
+        padding: 20px 0 40px;
+    }
+}
+
+.search-page-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include xs {
+        margin-bottom: 25px;
+        justify-content: space-between;
+
+        .article-conut {
+            margin: 0;
+        }
+    }
+}
+
+.search-page-title {
+    font-size: 24px;
+    color: $text;
+    font-weight: 700;
+    margin: 0;
+
+    @include rtl {
+        margin-left: 13px;
+    }
+
+    @include ltr {
+        margin-right: 13px;
+    }
+
+    @include xs {
+        margin: 0 0 8px;
+
+        @include rtl {
+            margin-left: 0;
+        }
+
+        @include ltr {
+            margin-right: 0;
+        }
+    }
+
+    span {
+        color: $main;
+        @include xs{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.single-banner {
+    margin: auto;
+    padding: 0;
+    width: 63.9%;
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.single-banner-size {
+    padding-bottom: 12.3626373626%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &:not(div) {
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 70px solid rgba(255, 255, 255, 0);
+            top: 0;
+            right: 0;
+            transition: all 0.5s ease-in-out;
+            z-index: 2;
+        }
+
+        &:hover {
+            &::before {
+                border: 0 solid rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+}
+
+.triple-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 65px;
+
+    @include sm {
+        gap: 15px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.triple-banner-size {
+    padding-bottom: 83.3333333333%;
+    position: relative;
+    overflow: hidden;
+}
+
+.double-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 67px;
+
+    @include sm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner-cont {
+        width: 35.5%;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+}
+
+.double-banner-size {
+    padding-bottom: 83.3333333333%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+        border-radius: 0;
+    }
+}
+
+.post-banner-size {
+    width: 80%;
+    margin: auto;
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.post-single-banner-size {
+    padding-bottom: 12.3626373626%;
+    position: relative;
+    overflow: hidden;
+}
+
+.compare-banner {
+    margin-bottom: 24px;
+
+    @include sm {
+        display: none;
+    }
+
+}
+
+.compare-banners {
+    margin-bottom: 38px;
+
+    @include sm {
+        display: none;
+    }
+
+}

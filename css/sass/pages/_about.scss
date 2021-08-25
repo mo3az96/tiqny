@@ -1,0 +1,262 @@
+.about-main-div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 5px 0 110px;
+
+    @include sm {
+        display: flex;
+        flex-direction: column;
+        gap: unset;
+        grid-template-columns: unset;
+        padding: 5px 0 60px;
+    }
+
+    @include xs {
+        padding: 20px 0 40px;
+    }
+}
+
+.about-main-head {
+    margin-bottom: 26px;
+
+    .dark-mode & {
+        filter: brightness(0) invert(1);
+    }
+
+    &.xs-head {
+        display: none;
+    }
+
+    @include sm {
+        display: none;
+
+        &.xs-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.about-main-text {
+    @include sm {
+        order: 3;
+        margin-top: 26px;
+    }
+}
+
+.about-main-paragraph {
+    font-size: 30px;
+    color: $text;
+    line-height: 1.467;
+    text-transform: uppercase;
+    margin: 0;
+
+    @include sm {
+        text-align: center;
+    }
+}
+
+.about-main-img {
+    position: relative;
+
+    .laptop {
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .mobile {
+        width: 23.6%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: all 0.5s ease-in-out 0.5s;
+    }
+
+
+}
+
+.about-section-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: $text;
+    margin-bottom: 55px;
+
+    @include sm {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+}
+
+.about-features-container {
+    background-color: $sec;
+    background-image: url(../images/pattern/01.png);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% + 135px);
+    background-position-y: calc(100% + 350px);
+    padding: 100px 0 115px;
+
+    @include sm {
+        padding: 50px 0;
+        background-image: none;
+    }
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+
+    .about-section-title {
+        color: #fff;
+    }
+}
+
+.about-feats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+
+    @include md {
+        gap: 15px;
+    }
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @include xs {
+        gap: 30px 10px;
+    }
+}
+
+.about-feat {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 0;
+
+    .feat-icon {
+        font-size: 60px;
+        color: $main;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .feat-name {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        margin: 0 0 17px;
+
+        @include xs {
+            font-size: 16px;
+        }
+    }
+
+    .feat-text {
+        color: #bdbed1;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+
+        @include xs {
+            font-size: 14px;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        .feat-icon {
+            color: $third;
+        }
+    }
+}
+
+.team-work-container {
+    padding: 95px 0 65px;
+
+    @include sm {
+        padding: 50px 0;
+    }
+}
+
+.team-work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 38px 51px;
+
+    @include md {
+        gap: 30px 15px;
+    }
+
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+    }
+}
+
+.person {
+    text-align: center;
+
+    .person-img {
+        position: relative;
+        padding-bottom: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 17px;
+        display: block;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .person-name {
+        font-size: 18px;
+        color: $text;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    .person-postion {
+        color: #111111;
+        font-size: 14px;
+        display: block;
+        margin: 3px 0 0;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+    }
+}

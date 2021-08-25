@@ -1,0 +1,505 @@
+.single-page {
+    padding: 20px 0 100px;
+
+    @include sm {
+        padding: 20px 0 40px;
+    }
+}
+
+.smartphone-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 25px;
+
+    @include sm {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+}
+
+.smartphone-main-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 23px;
+    align-items: center;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.smartphone-imgs {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    height: 359px;
+
+    @include md {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.main-imgs-cont {
+    border: 2px solid #d6d8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 359px;
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.single-img-container {
+    padding-bottom: 100%;
+    position: relative;
+
+    .single-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 75px;
+    }
+}
+
+.main-thumbs-cont {
+    width: 101px;
+    max-height: 100%;
+    padding: 13px 0;
+    position: relative;
+
+    .main-thumbs-slider {
+        height: 100%;
+    }
+
+    @include md {
+        margin-top: 10px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .swiper-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: $text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 12;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $main;
+        }
+
+        &.swiper-btn-next {
+            bottom: -5px;
+        }
+
+        &.swiper-btn-prev {
+            top: -5px;
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+}
+
+.thumb-cont {
+    padding-bottom: 100%;
+    position: relative;
+    border: 2px solid #d6d8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+
+    .thumb-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 48px;
+    }
+}
+
+.smartphone-infos-grid {
+    background-color: #d6d8e8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dark-mode & {
+        background-color: #495094;
+    }
+}
+
+.smartphone-infos-item {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0 5px;
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+
+    .img {
+        height: 58px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 13px;
+    }
+
+    .name {
+        color: $text;
+        font-weight: 700;
+        font-size: 20px;
+        margin: 0 0 3px;
+    }
+
+    .desc {
+        font-size: 16px;
+        color: #111111;
+        margin: 0;
+        line-height: 1.25;
+        height: 40px;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+    }
+}
+
+.smartphone-main-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+.smartphone-main-btn {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: $sec;
+    transition: all 0.3s ease-in-out;
+
+    .dark-mode & {
+        color: $sec;
+        background-color: #fff;
+    }
+
+    i {
+        color: #fbc42f;
+    }
+
+    &:nth-of-type(2n) {
+        background-color: $dark;
+
+        .dark-mode & {
+            background-color: #e9eaf2;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $third;
+
+        &:nth-of-type(2n) {
+            color: #fff;
+
+            .dark-mode & {
+                background-color: $third;
+            }
+        }
+    }
+}
+
+.smartphone-banners {
+    margin-top: 32px;
+
+    @include sm {
+        margin-top: 30px;
+    }
+}
+
+.phone-features {
+    margin-top: 50px;
+}
+
+.article-title {
+    font-size: 24px;
+    color: $text;
+    font-weight: 700;
+    margin: 0 0 28px;
+
+    @include sm {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+}
+
+.smartphone-banner {
+    margin-top: 30px;
+}
+
+.phone-prices {
+    margin-top: 80px;
+
+    @include sm {
+        margin-top: 45px;
+    }
+}
+
+.prices-table {
+    border: 2px solid #d6d8e8;
+
+    .dark-mode & {
+        border-color: #495094;
+    }
+
+    .price-item {
+        display: grid;
+        background-color: #d6d8e8;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 2px;
+        align-items: center;
+        border-bottom: 2px solid #d6d8e8;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        @include sm {
+            grid-template-columns: unset;
+            gap: unset;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #fff;
+            text-align: center;
+            justify-content: center;
+            padding: 22px 0 17px;
+        }
+
+        .dark-mode & {
+            background-color: #495094;
+            border-color: #495094;
+        }
+    }
+
+    .location {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 17px;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        color: $text;
+
+        .dark-mode & {
+            background-color: $sec;
+        }
+
+        @include sm {
+            padding: 0 0 7px;
+        }
+    }
+
+    .price {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 17px;
+        background-color: #fff;
+        color: #111111;
+        font-size: 16px;
+
+        .dark-mode & {
+            background-color: $sec;
+            color: #bdbed1;
+        }
+
+        @include sm {
+            padding: 0 0 15px;
+        }
+    }
+
+    .buy-btns {
+        padding: 10px 17px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+
+        .dark-mode & {
+            background-color: $sec;
+        }
+
+        @include sm {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 0 0;
+        }
+    }
+
+    .buy-btn {
+        border-radius: 5px;
+        height: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sec;
+        padding: 0 20px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        .dark-mode & {
+            color: $sec;
+            background-color: #fff;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $main;
+        }
+
+        ~.buy-btn {
+            @include rtl {
+                margin-right: 5px;
+            }
+
+            @include ltr {
+                margin-left: 5px;
+            }
+        }
+
+        @include sm {
+            margin: 5px;
+        }
+    }
+}
+
+.phone-review {
+    margin-top: 55px;
+    margin-bottom: 40px;
+
+    @include sm {
+        margin-top: 45px;
+    }
+
+    p {
+        font-size: 20px;
+        color: #111111;
+        line-height: 1.8;
+        margin: 10px 0 0;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+
+        @include sm {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+    }
+
+    img {
+        border-radius: 10px;
+        margin: 35px auto;
+        display: block;
+    }
+}
+
+.review-img {
+    width: max-content;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 35px auto;
+
+    @include sm {
+        margin: 25px auto;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        color: #fff;
+    }
+
+    img {
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.review-banners {
+    margin: 0 0 35px;
+
+    @include sm {
+        margin: 0 0 25px;
+    }
+}

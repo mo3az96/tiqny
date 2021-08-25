@@ -1,0 +1,302 @@
+.post-content {
+    padding: 40px 0 0;
+    max-width: 946px;
+    width: 100%;
+    margin: auto;
+
+    @include sm {
+        padding: 20px 15px 0;
+    }
+}
+
+.post-body {
+    img {
+        border-radius: 10px;
+    }
+
+
+
+
+    .double-banner {
+        margin-top: 32px;
+        margin-bottom: 22px;
+
+        @include xs {
+            margin: 20px 0;
+        }
+    }
+
+    .post-single-banner-size {
+        margin-top: 32px;
+        margin-bottom: 0px;
+
+        @include xs {
+            margin: 20px 0 0;
+        }
+    }
+
+    .banner {
+
+        img {
+            border-radius: 0;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 40px 0 25px;
+    }
+
+    p {
+        line-height: 1.8;
+        color: #111;
+        font-size: 20px;
+        margin: 0 0 12px;
+        text-align: justify;
+
+        .dark-mode & {
+            color: #bdbed1;
+        }
+
+        ~a[data-fancybox] {
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            @include xs {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.post-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 26px;
+    text-align: center;
+
+    @include sm {
+        font-size: 26px;
+    }
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+
+    @include xs {
+        flex-direction: column;
+    }
+}
+
+.post-owner {
+    display: flex;
+    align-items: center;
+    color: $main;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .name {
+        @include rtl {
+            margin-right: 10px;
+        }
+
+        @include ltr {
+            margin-left: 10px;
+        }
+    }
+
+    &:hover {
+        color: $third;
+    }
+
+    @include xs {
+        margin: 0 0 10px;
+    }
+
+    .dark-mode & {
+        color: $third;
+
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+.post-info-items {
+    display: flex;
+    align-items: center;
+
+    @include xs {
+        justify-content: center;
+    }
+}
+
+.post-info-item {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-size: 12px;
+
+    .dark-mode & {
+        color: #bdbed1;
+    }
+
+    i {
+        font-size: 24px;
+
+        @include rtl {
+            margin-left: 8px;
+        }
+
+        @include ltr {
+            margin-right: 8px;
+        }
+    }
+
+    &:not(span) {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    @include rtl {
+        margin-right: 29px;
+    }
+
+    @include ltr {
+        margin-left: 29px;
+    }
+
+    @include xs {
+        margin: 0 7px;
+
+        @include rtl {
+            margin-right: 7px;
+        }
+
+        @include ltr {
+            margin-left: 7px;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    border-radius: 5px;
+    background-color: #d4d5e5;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: $sec;
+    padding: 0 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+
+    .dark-mode & {
+        background-color: #3b4296;
+        color: #b9bbd6;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $sec;
+
+        .dark-mode & {
+            background-color: #fff;
+            color: $sec;
+        }
+    }
+
+    @include rtl {
+        margin-left: 10px;
+    }
+
+    @include ltr {
+        margin-right: 10px;
+    }
+
+    @include xs {
+        padding: 0 15px;
+    }
+
+}
+
+.share {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.post-navs {
+    border: solid #e5e8ed;
+    border-width: 1px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dark-mode & {
+        border-color: transparent;
+        border-top-color: #495094;
+    }
+
+
+}
+
+.nav-post {
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #b2b2b2;
+    transition: all 0.3s ease-in-out;
+
+    .dark-mode & {
+        border-color: #fff;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+    &:hover {
+        color: $main;
+    }
+
+    @include xs {
+        font-size: 18px;
+
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+.related-blog-container {
+    padding: 80px 0;
+
+    .dark-mode & {
+        background-color: $dark;
+    }
+}
