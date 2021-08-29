@@ -56,16 +56,6 @@ $(document).ready(function () {
     if ($(window).width() >= 1199) {
         $('.phones-saerch-select').select2();
     }
-    $('.advanced-btn').click(function () {
-        $('.advanced-search').toggleClass('act');
-        $('.filter-overlay').toggle(300);
-        $(this).toggleClass('act');
-    });
-    $('.filter-overlay').click(function () {
-        $('.advanced-search').removeClass('act');
-        $('.filter-overlay').hide(300);
-        $('.advanced-btn').removeClass('act');
-    });
     //////////** comments scroll **//////////
 
     $('a[data-scroll]').click(function (e) {

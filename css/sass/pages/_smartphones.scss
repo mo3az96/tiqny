@@ -5,94 +5,6 @@
     .dark-mode & {
         background-color: $dark;
     }
-
-    @include md {
-        display: flex;
-        position: fixed;
-        top: 100px;
-        background-color: transparent;
-        padding: 0;
-        z-index: 12;
-        transition: all 0.3s ease-in-out;
-
-        .dark-mode & {
-            background-color: transparent;
-        }
-
-        @include rtl {
-            right: -300px;
-        }
-
-        @include ltr {
-            left: -300px;
-        }
-
-        &.act {
-            z-index: 16;
-
-            @include rtl {
-                right: -0;
-            }
-
-            @include ltr {
-                left: -0;
-            }
-        }
-    }
-}
-
-.advanced-cont {
-    @include md {
-        background-color: $sec;
-        padding: 20px 15px;
-        width: 300px;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-        z-index: 3;
-
-        .container {
-            padding: 0;
-        }
-
-        .dark-mode & {
-            background-color: $dark;
-        }
-    }
-}
-
-.filter-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    z-index: 2;
-    display: none;
-}
-
-.advanced-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 32px;
-    align-items: center;
-    justify-content: center;
-    background-color: $third;
-    font-size: 32px;
-    color: #fff !important;
-    margin-top: 70px;
-    display: none;
-    position: relative;
-    z-index: 3;
-
-    @include md {
-        display: flex;
-    }
-
-    &.act {
-        background-color: $main;
-        color: #fff;
-    }
 }
 
 .search-head {
@@ -100,10 +12,6 @@
     font-size: 24px;
     font-family: 500;
     margin: 0 0 18px;
-
-    @include md {
-        text-align: center;
-    }
 }
 
 .phones-saerch-form {
@@ -118,10 +26,10 @@
         }
     }
 
-    @include md {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+    // @include md {
+    //     flex-direction: column;
+    //     flex-wrap: nowrap;
+    // }
 }
 
 .phones-saerch-input {
@@ -140,26 +48,51 @@
     }
 
     @include md {
-        width: 100%;
+        width: calc(100% - 60px);
     }
 }
 
 .phones-saerch-submit {
+    i {
+        transform: scaleX(-1);
+    }
+
+    .text {
+        @include rtl {
+            margin-right: 4px;
+        }
+
+        @include ltr {
+            margin-left: 4px;
+        }
+    }
+
     @include md {
-        width: 100%;
-        order: 3;
-        margin-top: 15px;
+        height: 50px;
+        width: 50px;
+
+        .text {
+            display: none;
+        }
+
+        @include rtl {
+            margin-right: 10px;
+        }
+
+        @include ltr {
+            margin-left: 10px;
+        }
     }
 }
 
 .addition-fieldes {
     width: 100%;
     padding-top: 40px;
-    display: none;
+    // display: none;
 
-    @include md {
-        padding-top: 30px;
-    }
+    // @include md {
+    //     padding-top: 30px;
+    // }
 }
 
 .from-grid {
@@ -181,10 +114,6 @@
     display: flex;
     align-items: center;
     margin: 18px 0 0;
-
-    @include sm {
-        justify-content: center;
-    }
 
     .reset {
         display: flex;
