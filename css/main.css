@@ -1265,13 +1265,7 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
   .top-news-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .top-news-grid {
-    gap: 15px;
+    gap: 10px;
   }
 }
 
@@ -1315,15 +1309,9 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
   .top-news-col {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .top-news-col {
-    gap: 15px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 
@@ -1375,7 +1363,7 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
 
 @media (max-width: 991px) {
   .top-news-item .item-info {
-    bottom: 20px;
+    bottom: 7px;
     left: 15px;
     right: 15px;
   }
@@ -1410,6 +1398,12 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
   background-color: #cf3c95;
 }
 
+@media (max-width: 767px) {
+  .top-news-item .item-cat {
+    display: none;
+  }
+}
+
 .top-news-item .item-name {
   font-size: 15px;
   font-weight: bold;
@@ -1427,6 +1421,15 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
 
 .top-news-item .item-name:hover {
   color: #15bdcf;
+}
+
+@media (max-width: 991px) {
+  .top-news-item .item-name {
+    -webkit-line-clamp: 3;
+    height: 48px;
+    font-size: 11px;
+    line-height: 1.533;
+  }
 }
 
 .top-news-item:hover .item-img img {
@@ -1454,6 +1457,29 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
     font-size: 20px;
     line-height: 1.6;
     height: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-news-item.main-news .item-cat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-news-item.main-news .item-name {
+    -webkit-line-clamp: 3;
+    height: 50px;
+    font-size: 15px;
+    line-height: 1.733;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-news-item.main-news .item-info {
+    bottom: 20px;
   }
 }
 
