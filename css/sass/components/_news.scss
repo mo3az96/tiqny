@@ -100,7 +100,7 @@
         margin-bottom: 16px;
 
         &:hover {
-            background-color: $main;
+            background-color: $main !important;
         }
 
         @include xs {
