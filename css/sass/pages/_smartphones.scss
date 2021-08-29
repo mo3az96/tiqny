@@ -98,6 +98,7 @@
     @include md {
         gap: 15px;
         grid-template-columns: 1fr;
+        margin-bottom: 30px;
 
         .from-group {
             margin: 0;
@@ -109,6 +110,10 @@
     display: flex;
     align-items: center;
     margin: 18px 0 0;
+
+    @include md {
+        justify-content: center;
+    }
 
     .reset {
         display: flex;
@@ -333,6 +338,10 @@
                     margin-left: 4px;
                 }
             }
+        }
+
+        @include sm {
+            margin: 19px 15px 0;
         }
     }
 

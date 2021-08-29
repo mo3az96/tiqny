@@ -4991,6 +4991,7 @@ html[dir="ltr"] .phones-saerch-submit .text {
     gap: 15px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    margin-bottom: 30px;
   }
   .from-grid .from-group {
     margin: 0;
@@ -5005,6 +5006,14 @@ html[dir="ltr"] .phones-saerch-submit .text {
       -ms-flex-align: center;
           align-items: center;
   margin: 18px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .tools-line {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .tools-line .reset {
@@ -5263,6 +5272,12 @@ html[dir="rtl"] .price-slider.noUi-horizontal .noUi-tooltip span {
 
 html[dir="ltr"] .price-slider.noUi-horizontal .noUi-tooltip span {
   margin-left: 4px;
+}
+
+@media (max-width: 991px) {
+  .price-slider.noUi-horizontal {
+    margin: 19px 15px 0;
+  }
 }
 
 .search-page {
