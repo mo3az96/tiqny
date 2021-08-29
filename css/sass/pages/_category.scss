@@ -90,6 +90,7 @@
     font-size: 12px;
     font-weight: 700;
     border-radius: 5px;
+    white-space: nowrap;
 
     @include sm {
         margin: auto;

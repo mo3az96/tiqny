@@ -70,6 +70,12 @@
     padding-bottom: 83.3333333333%;
     position: relative;
     overflow: hidden;
+
+    @include xs {
+        ~.triple-banner-size {
+            display: none;
+        }
+    }
 }
 
 .double-banner {
@@ -93,6 +99,12 @@
 
         @include sm {
             width: 100%;
+        }
+
+        @include xs {
+            ~.banner-cont {
+                display: none;
+            }
         }
     }
 }

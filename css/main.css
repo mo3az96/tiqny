@@ -1165,6 +1165,12 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .triple-banner-size ~ .triple-banner-size {
+    display: none;
+  }
+}
+
 .double-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,6 +1208,12 @@ html[dir="ltr"] .select2-container .select2-selection--single .select2-selection
 @media (max-width: 991px) {
   .double-banner .banner-cont {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .double-banner .banner-cont ~ .banner-cont {
+    display: none;
   }
 }
 
@@ -4721,6 +4733,7 @@ html[dir="ltr"] .category-info-text {
   font-size: 12px;
   font-weight: 700;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 @media (max-width: 991px) {
