@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/line-awesome.css" />
     <link rel="stylesheet" href="css/fancybox.css" />
     <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -240,23 +241,6 @@
                                     </div>
                                 </div>
                                 <div class="from-group">
-                                    <label>السعر</label>
-                                    <div class="select-cont">
-                                        <select class="phones-saerch-select">
-                                            <option>حدد السعر</option>
-                                            <option>السعر 1</option>
-                                            <option>السعر 2</option>
-                                            <option>السعر 3</option>
-                                            <option>السعر 4</option>
-                                            <option>السعر 5</option>
-                                            <option>السعر 6</option>
-                                            <option>السعر 6</option>
-                                            <option>السعر 7</option>
-                                            <option>السعر 8</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="from-group">
                                     <label>الرام</label>
                                     <div class="select-cont">
                                         <select class="phones-saerch-select">
@@ -323,6 +307,10 @@
                                             <option>سعة البطارية 8</option>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="from-group">
+                                    <label>السعر</label>
+                                    <div id="priceSlider" class="price-slider"></div>
                                 </div>
                             </div>
                         </div>
@@ -743,8 +731,34 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/fancybox.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/lazyload.js"></script>
+
+    <script>
+        var slider = document.getElementById('priceSlider');
+        noUiSlider.create(slider, {
+            start: [0, 500],
+            connect: true,
+            tooltips: [true, true],
+            format: {
+                from: Number,
+                to: function (value) {
+
+                    if (document.dir == 'rtl') {
+                        return (parseInt(value) + "<span>ريال </span>");
+                    } else {
+                        return (parseInt(value) + "<span> SAR</span>");
+                    }
+
+                }
+            },
+            range: {
+                'min': 0,
+                'max': 500
+            }
+        });
+    </script>
 </body>
 
 </HTML>

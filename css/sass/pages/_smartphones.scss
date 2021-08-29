@@ -25,11 +25,6 @@
             color: #fff;
         }
     }
-
-    // @include md {
-    //     flex-direction: column;
-    //     flex-wrap: nowrap;
-    // }
 }
 
 .phones-saerch-input {
@@ -88,7 +83,7 @@
 .addition-fieldes {
     width: 100%;
     padding-top: 40px;
-    // display: none;
+    display: none;
 
     // @include md {
     //     padding-top: 30px;
@@ -281,4 +276,64 @@
     .dark-mode & {
         background-color: $dark;
     }
+}
+
+
+
+.price-slider {
+    &.noUi-horizontal {
+        height: 10px;
+        margin-top: 19px;
+        background: #1b2057;
+        border-radius: 5px;
+        border: none;
+        box-shadow: none;
+
+        .noUi-connects {
+            border-radius: 0;
+        }
+
+        .noUi-connect {
+            background-color: $main;
+        }
+
+        .noUi-handle {
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+            width: 20px;
+            height: 20px;
+            border: none;
+            top: -5px;
+
+            &::after,
+            &::before {
+                display: none;
+            }
+        }
+
+        .noUi-tooltip {
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            bottom: auto;
+            top: 28px;
+            font-size: 14px;
+            color: #7b81c5;
+
+            span {
+                @include rtl {
+                    margin-right: 4px;
+                }
+
+                @include ltr {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
 }
